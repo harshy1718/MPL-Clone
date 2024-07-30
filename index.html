@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPL Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MPL Clone</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" onclick="showWallet()">Wallet</a></li>
+                <li><a href="#" onclick="showProfile()">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2 id="welcome-message">Welcome! Enjoy your favorite games and win rewards!</h2>
+            <div class="games-grid">
+                <div class="game" onclick="showGameOptions('Game 1')">
+                    <img src="images/1.jpeg" alt="Game 1 Logo">
+                    <p>Rummy</p>
+                </div>
+                <div class="game" onclick="showGameOptions('Game 2')">
+                    <img src="images/2.jpeg" alt="Game 2 Logo">
+                    <p>Carrom Champ</p>
+                </div>
+                <div class="game" onclick="showGameOptions('Game 3')">
+                    <img src="images/small_Aviator_skill_1_1_c1cd6bc62f.png" alt="Game 3 Logo">
+                    <p>Aviator Skill</p>
+                </div>
+                <div class="game" onclick="showGameOptions('Game 4')">
+                    <img src="images/Sn_L_Icon_HQ_4_74c470f34c.webp" alt="Game 4 Logo">
+                    <p>Snakes and Ladder</p>
+                </div>
+                <div class="game" onclick="showGameOptions('Game 5')">
+                    <img src="images/winpatti_with_3_e6acef10c3.webp" alt="Game 5 Logo">
+                    <p>Win Patti</p>
+                </div>
+                <div class="game" onclick="showGameOptions('Game 6')">
+                    <img src="images/Fruit-Dart-Tricks.png" alt="Game 6 Logo">
+                    <p>Fruit Dart</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="wallet-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('wallet-popup')">&times;</span>
+            <h2>Wallet</h2>
+            <p>Your balance: $<span id="balance">100</span></p>
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+    </div>
+
+    <div id="profile-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('profile-popup')">&times;</span>
+            <h2>Profile</h2>
+            <p>Username: <span id="profile-username"></span></p>
+            <p>Money used: ₹<span id="money-used">0</span></p>
+        </div>
+    </div>
+
+    <div id="game-options-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('game-options-popup')">&times;</span>
+            <h2 id="game-title">Game Options</h2>
+            <div class="game-option">
+                <h3>H2H</h3>
+                <p>Prize: ₹10</p>
+                <p>Entry: ₹6</p>
+                <button onclick="enterGame('H2H prize - ₹10 and entry - ₹6')">Enter</button>
+            </div>
+            <div class="game-option">
+                <h3>H2H</h3>
+                <p>Prize: ₹20</p>
+                <p>Entry: ₹12</p>
+                <button onclick="enterGame('H2H prize - ₹20 and entry - ₹12')">Enter</button>
+            </div>
+            <div class="game-option">
+                <h3>TOURNAMENT</h3>
+                <p>Winning Pool: ₹1000</p>
+                <p>Entry: ₹2</p>
+                <button onclick="enterGame('Tournament winning pool - ₹1000 and entry - ₹2')">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
